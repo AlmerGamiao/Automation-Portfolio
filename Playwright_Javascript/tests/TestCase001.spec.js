@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';
 require('dotenv').config();  // Use require instead of import
-import {Objects} from '../pages/Objects.js';  // Remove the curly braces
+import {LoginPage} from '../pages/LoginPage.js';  // Remove the curly braces
 
 
 test('TestCase001',async ({page}, testInfo)  =>{
@@ -8,9 +8,9 @@ console.log(process.env.BASE_URL)
 console.log(process.env.USER_NAME)
 console.log(process.env.PASSWORD)
 
-const obj = new Objects(page);
-await obj.gotologinpage(); 
-await obj.login(process.env.USER_NAME, process.env.PASSWORD);    
+const login = new LoginPage(page);
+await login.gotologinpage(); 
+await login.login(process.env.USER_NAME, process.env.PASSWORD);    
 
     // await page.goto(process.env.BASE_URL)
     // await this.usernameInput.fill(process.env.USERNAME);

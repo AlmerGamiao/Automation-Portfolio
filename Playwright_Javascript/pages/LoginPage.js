@@ -1,7 +1,7 @@
 
 require('dotenv').config();  // Use require instead of import
 
-exports.Objects = class Objects{
+exports.LoginPage = class LoginPage{
     constructor(page) {
         this.page = page;   
         this.usernameInput = ('#user-name');

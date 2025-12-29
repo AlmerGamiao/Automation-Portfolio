@@ -1,0 +1,23 @@
+{
+  "name": "cypress_automation",
+  "version": "1.0.0",
+  "description": "Automation",
+  "homepage": "https://github.com/AlmerGamiao/Automation-Portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/AlmerGamiao/Automation-Portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlmerGamiao/Automation-Portfolio.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cypress": "^15.7.0"
+  }
+}

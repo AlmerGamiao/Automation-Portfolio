@@ -4,25 +4,24 @@ import {LoginPage} from '../pages/LoginPage.js';  // Remove the curly braces
 
 
 test('TestCase001',async ({page}, testInfo)  =>{
-console.log(process.env.BASE_URL)
 console.log(process.env.USER_NAME)
 console.log(process.env.PASSWORD)
+await page.goto("https://www.saucedemo.com/");
 
-const login = new LoginPage(page);
-await login.gotologinpage(); 
-await login.login(process.env.USER_NAME, process.env.PASSWORD);    
+// const login = new LoginPage(page);
+// await login.login(process.env.USER_NAME, process.env.PASSWORD);    
 
     // await page.goto(process.env.BASE_URL)
     // await this.usernameInput.fill(process.env.USERNAME);
     // await this.passwordInput.fill(process.env.PASSWORD);
-    // await page.fill('#user-name','standard_user')
-    // await page.fill('#password','secret_sauce')
+    await page.fill('#user-name','standard_user')
+    await page.fill('#password','secret_sauce')
     await page.screenshot();
-    await testInfo.attach('Login Page', { 
-          body: await page.screenshot(), 
-          contentType: 'image/png' 
-        });
-    // await page.click('#login-button')
+    // await testInfo.attach('Login Page', { 
+    //       body: await page.screenshot(), 
+    //       contentType: 'image/png' 
+    //     });
+    await page.click('#login-button')
     await expect(page.getByText('Swag Labs')).toBeVisible();
 
 

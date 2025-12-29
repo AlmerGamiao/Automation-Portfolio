@@ -13,8 +13,8 @@ test('Checkboxes ', async ({page}) => {
     await (await page.locator('#sunday')).uncheck();
     await page.waitForTimeout(5000);
     expect(await page.locator('#sunday').isChecked()).toBeFalsy();
-    
-const checkedboxlocators = [
+
+    const checkedboxlocators = [
 '#sunday',
 '#saturday',
 '#friday',

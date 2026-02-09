@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+require('dotenv').config();
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -14,11 +15,12 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  // retries: process.env.CI ? 2 : 0,
+  retries: 1,
   /* Opt out of parallel tests on CI. */
   // workers: process.env.CI ? 1 : undefined,
    workers: 1,
@@ -26,17 +28,18 @@ export default defineConfig({
   reporter: [['html'],
             ['allure-playwright',{outputFolder:'my-allure-results'}]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  use: {
-    headless: true,
-     args: ['--start-maximized'],
-    /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure'
+ use: {
+  headless: false,
+  args: ['--start-maximized'],
+  trace: 'on',
+  screenshot: 'only-on-failure',
+  video: 'retain-on-failure',
+  extraHTTPHeaders: {
+    // @ts-ignore
+    'x-api-key': process.env.API_KEY,
+    'accept': 'application/json',
   },
+},
 timeout: 30000,
   /* Configure projects for major browsers */
   projects: [

@@ -1,0 +1,19 @@
+{
+  name: 'Almer',
+  job: 'QA Automation Engineer',
+  id: '837',
+  createdAt: '2026-02-09T12:23:00.678Z',
+  _meta: {
+    powered_by: 'ReqRes',
+    docs_url: 'https://app.reqres.in/documentation',
+    upgrade_url: 'https://app.reqres.in/upgrade',
+    example_url: 'https://app.reqres.in/examples/notes-app',
+    variant: 'v1_a',
+    message: 'Classic ReqRes still works. Projects add persistence, auth, and logs.',
+    cta: {
+      label: 'See example app',
+      url: 'https://app.reqres.in/examples/notes-app'
+    },
+    context: 'legacy_success'
+  }
+}

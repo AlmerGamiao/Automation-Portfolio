@@ -16,8 +16,8 @@ await Login.gotologinpage();
 await Login.login(process.env.USER_NAME,process.env.PASSWORD);
 await page.waitForTimeout(2000);
 
-// await Home.addProductToCart(productName);
-// await page.waitForTimeout(2000);
+await Home.addProductToCart(productName);
+await page.waitForTimeout(2000);
 await Home.goToCart();
 await page.waitForTimeout(3000);
 

@@ -23,7 +23,24 @@ const {test, expect} = require('@playwright/test');
 // })
 
 //fail
-test('Test5', async ({page, browserName}) => {
-    test.fail()
-    expect(1).toBe(1);
+// test('Test5', async ({page, browserName}) => {
+//     console.log("This is Test5.....");
+//     test.fail()
+//     expect(1).toBe(2);
+// })
+
+// test('Test6', async ({page, browserName}) => {
+//     console.log("This is Test6.....");
+//     if(browserName === 'chromium'){
+//         test.fail();
+//     }
+// })
+
+//slow
+test('Test7', async ({page, browserName}) => {
+    // test.slow();
+    test.setTimeout(6000);
+    console.log("This is Test7.....");
+   await page.goto('https://www.demoblaze.com/');
 })
+

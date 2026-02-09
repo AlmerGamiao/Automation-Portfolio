@@ -20,7 +20,7 @@ await expect(page.locator('#NewsLetterSubscriptions_0__IsActive')).toBeChecked(t
 
 await expect(page.locator('#register-button')).toHaveAttribute('type', 'submit');
 
-await expect(page.locator('.page-title h1')).toHaveText('Register');
+await expect(page.locator('.page-title h1')).toHaveText('Register'); //exact text match
 
 await expect(page.locator('.page-title h1')).toContainText('Reg'); //partial text match
 

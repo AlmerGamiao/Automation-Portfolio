@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -24,7 +23,8 @@ export default defineConfig({
   // workers: process.env.CI ? 1 : undefined,
    workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [['html'],
+            ['allure-playwright',{outputFolder:'my-allure-results'}]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     headless: true,
@@ -37,14 +37,14 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     video: 'retain-on-failure'
   },
-
+timeout: 30000,
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        viewport:{width:1680,height:1050},
+        viewport:{width:1672,height:884},
        },
     },
 

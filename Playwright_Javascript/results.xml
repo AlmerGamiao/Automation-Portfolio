@@ -1,0 +1,25 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="6.007076">
+<testsuite name="TestTutorials\Reporters.spec.js" timestamp="2026-02-07T09:08:03.800Z" hostname="chromium" tests="3" failures="0" skipped="0" time="4.266" errors="0">
+<testcase name="Test1" classname="TestTutorials\Reporters.spec.js" time="1.542">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\TestTutorials-Reporters-Test1-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Test2" classname="TestTutorials\Reporters.spec.js" time="0.973">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\TestTutorials-Reporters-Test2-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Test3" classname="TestTutorials\Reporters.spec.js" time="1.751">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\TestTutorials-Reporters-Test3-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

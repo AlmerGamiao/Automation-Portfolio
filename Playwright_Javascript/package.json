@@ -17,8 +17,9 @@
   },
   "homepage": "https://github.com/AlmerGamiao/Automation-Portfolio#readme",
   "devDependencies": {
-    "@playwright/test": "^1.56.1",
-    "@types/node": "^24.10.0"
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^24.10.0",
+    "allure-playwright": "^3.4.5"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
